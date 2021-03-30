@@ -1,7 +1,7 @@
 <h1>All Owners</h1>
 <div>
 <% @owners.each do |owner| %>
-    <% link_to owner.name, owner_path(owner)) %>
+    <% link_to owner.name, owner_path(owner) %>
     <%= (link_to "Edit Owner", edit_owner_path(owner)) %>
     <% end %>
 </div>

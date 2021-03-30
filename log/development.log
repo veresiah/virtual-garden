@@ -234,3 +234,302 @@ Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms | Allocations: 
 ActionView::Template::Error (link_tree argument must be a directory):
   
 app/assets/config/manifest.js:1
+Started GET "/owners" for ::1 at 2021-03-30 14:21:35 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  Rendered owners/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1574)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1650)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 6940)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Owners</h1>
+<div>
+<% @owners.each do |owner| %>
+    <% link_to owner.name, owner_path(owner)) %>
+    <%= (link_to "Edit Owner", edit_owner_path(owner)) %>
+    <% end %>
+</div>
+):
+1:    <h1>All Owners</h1>
+2:    <div>
+3:    <% @owners.each do |owner| %>
+4:        <% link_to owner.name, owner_path(owner)) %>
+5:        <%= (link_to "Edit Owner", edit_owner_path(owner)) %>
+6:        <% end %>
+7:    </div>
+  
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting end-of-input
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting end-of-input
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting end-of-input
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting end-of-input
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting end-of-input
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting end-of-input
+Started GET "/owners" for ::1 at 2021-03-30 14:22:59 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  Rendered owners/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1140)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1212)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2385)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Owners</h1>
+<div>
+<% @owners.each do |owner| %>
+    <% link_to owner.name, owner_path(owner)) %>
+    <%= (link_to "Edit Owner", edit_owner_path(owner) %>
+    <% end %>
+</div>
+):
+1:    <h1>All Owners</h1>
+2:    <div>
+3:    <% @owners.each do |owner| %>
+4:        <% link_to owner.name, owner_path(owner)) %>
+5:        <%= (link_to "Edit Owner", edit_owner_path(owner) %>
+6:        <% end %>
+7:    </div>
+  
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+Started GET "/owners" for ::1 at 2021-03-30 14:23:04 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  Rendered owners/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1129)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1201)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1526)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Owners</h1>
+<div>
+<% @owners.each do |owner| %>
+    <% link_to owner.name, owner_path(owner)) %>
+    <%= (link_to "Edit Owner", edit_owner_path(owner) %>
+    <% end %>
+</div>
+):
+1:    <h1>All Owners</h1>
+2:    <div>
+3:    <% @owners.each do |owner| %>
+4:        <% link_to owner.name, owner_path(owner)) %>
+5:        <%= (link_to "Edit Owner", edit_owner_path(owner) %>
+6:        <% end %>
+7:    </div>
+  
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:4: syntax error, unexpected ')', expecting end
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+Started GET "/owners" for ::1 at 2021-03-30 14:23:26 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  Rendered owners/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1571)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1647)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 6460)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Owners</h1>
+<div>
+<% @owners.each do |owner| %>
+    <% link_to owner.name, owner_path(owner) %>
+    <%= (link_to "Edit Owner", edit_owner_path(owner) %>
+    <% end %>
+</div>
+):
+1:    <h1>All Owners</h1>
+2:    <div>
+3:    <% @owners.each do |owner| %>
+4:        <% link_to owner.name, owner_path(owner) %>
+5:        <%= (link_to "Edit Owner", edit_owner_path(owner) %>
+6:        <% end %>
+7:    </div>
+  
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/owners/index.html.erb:9: syntax error, unexpected end, expecting ')'
+Started GET "/owners" for ::1 at 2021-03-30 14:23:50 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (1.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 911)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 4270)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.5ms | Allocations: 5442)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/owners" for ::1 at 2021-03-30 14:26:19 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 676)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 3489)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms | Allocations: 3814)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/owners" for ::1 at 2021-03-30 14:26:21 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 676)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3295)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms | Allocations: 3619)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/owners" for ::1 at 2021-03-30 14:27:00 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.1ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 676)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3383)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms | Allocations: 3707)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/owners" for ::1 at 2021-03-30 14:27:01 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3311)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms | Allocations: 3626)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/owners" for ::1 at 2021-03-30 14:33:52 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/owners/index.html.erb:3
+  [1m[36mOwner Load (0.5ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1394)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 4038)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.7ms | Allocations: 4353)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/owners" for ::1 at 2021-03-30 14:37:48 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 667)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 1923.5ms | Allocations: 13177)
+Completed 500 Internal Server Error in 1925ms (ActiveRecord: 0.2ms | Allocations: 13492)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Applications/Flatiron Curriculum/Flatiron/Projects/virtual-garden/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
