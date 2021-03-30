@@ -197,3 +197,25 @@ puma (5.2.2) lib/puma/thread_pool.rb:337:in `with_force_shutdown'
 puma (5.2.2) lib/puma/request.rb:75:in `handle_request'
 puma (5.2.2) lib/puma/server.rb:431:in `process_client'
 puma (5.2.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/owners" for ::1 at 2021-03-30 13:34:29 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  Rendered owners/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 243)
+  Rendered layout layouts/application.html.erb (Duration: 75.5ms | Allocations: 16025)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 0.0ms | Allocations: 21569)
+
+
+  
+ActionView::Template::Error (link_tree argument must be a directory):
+  
+app/assets/config/manifest.js:1
+Started GET "/" for ::1 at 2021-03-30 13:35:42 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/veresia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/veresia/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.2ms | Allocations: 233)
+Completed 200 OK in 21ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 1021)
+
+

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MiniProject</title>
+    <title>Virtual Garden</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,17 @@
   </head>
 
   <body>
+  <div> 
+  <h1> Welcome to <strong>Virtual Garden!</strong></h1>
+  <p> This app gives you the opportunity to create your own virtual garden where you can store all your kitchen garden ideas right in time for Spring and Summer.  </p>
+  </div> 
+
+  <div> <%= link_to "Create a Owner", new_owner_path %></div>
+  <div> <%= link_to "Create a Garden", new_garden_path %></div>
+  <div> <%= link_to "Add a Plant", new_plant_path %></div>
+  <div> <%= link_to "All Gardens", gardens_path %></div>
+  <div> <%= link_to "All Owners", owners_path %></div>
+  <div> <%= link_to "All Plants", plants_path %></div>
     <%= yield %>
   </body>
 </html>
