@@ -1,6 +1,6 @@
 <h1>All Gardens</h1>
 <% @gardens.each do |garden| %>
-    <% link_to garden.name, garden_path(garden)) %>
+    <% link_to garden.name, garden_path(garden) %>
     <%= (link_to "Edit Garden", edit_garden_path(garden)) %>
     <% end %>
 </div>

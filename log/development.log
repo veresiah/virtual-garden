@@ -533,3 +533,158 @@ Your manifest contains:
     13:   <body>
   
 app/views/layouts/application.html.erb:10
+Started GET "/owners" for ::1 at 2021-03-30 14:53:00 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.6ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1751)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 2203.7ms | Allocations: 29591)
+Completed 500 Internal Server Error in 2243ms (ActiveRecord: 0.6ms | Allocations: 34758)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Applications/Flatiron Curriculum/Flatiron/Projects/virtual-garden/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/owners" for ::1 at 2021-03-30 14:53:07 -0400
+Processing by OwnersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering owners/index.html.erb within layouts/application
+  [1m[36mOwner Load (0.2ms)[0m  [1m[34mSELECT "owners".* FROM "owners"[0m
+  ↳ app/views/owners/index.html.erb:3
+  Rendered owners/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 735)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 1105.9ms | Allocations: 6519)
+Completed 500 Internal Server Error in 1108ms (ActiveRecord: 0.2ms | Allocations: 6938)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Applications/Flatiron Curriculum/Flatiron/Projects/virtual-garden/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/gardens" for ::1 at 2021-03-30 14:53:14 -0400
+Processing by GardensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/index.html.erb within layouts/application
+  Rendered gardens/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1140)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1212)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 3472)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Gardens</h1>
+<% @gardens.each do |garden| %>
+    <% link_to garden.name, garden_path(garden)) %>
+    <%= (link_to "Edit Garden", edit_garden_path(garden)) %>
+    <% end %>
+</div>
+):
+1:    <h1>All Gardens</h1>
+2:    <% @gardens.each do |garden| %>
+3:        <% link_to garden.name, garden_path(garden)) %>
+4:        <%= (link_to "Edit Garden", edit_garden_path(garden)) %>
+5:        <% end %>
+6:    </div>
+  
+app/views/gardens/index.html.erb:3: syntax error, unexpected ')', expecting end
+app/views/gardens/index.html.erb:8: syntax error, unexpected end, expecting end-of-input
+app/views/gardens/index.html.erb:3: syntax error, unexpected ')', expecting end
+app/views/gardens/index.html.erb:8: syntax error, unexpected end, expecting end-of-input
+app/views/gardens/index.html.erb:3: syntax error, unexpected ')', expecting end
+app/views/gardens/index.html.erb:8: syntax error, unexpected end, expecting end-of-input
+app/views/gardens/index.html.erb:3: syntax error, unexpected ')', expecting end
+app/views/gardens/index.html.erb:8: syntax error, unexpected end, expecting end-of-input
+app/views/gardens/index.html.erb:3: syntax error, unexpected ')', expecting end
+app/views/gardens/index.html.erb:8: syntax error, unexpected end, expecting end-of-input
+app/views/gardens/index.html.erb:3: syntax error, unexpected ')', expecting end
+app/views/gardens/index.html.erb:8: syntax error, unexpected end, expecting end-of-input
+Started GET "/gardens" for ::1 at 2021-03-30 14:54:48 -0400
+Processing by GardensController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering gardens/index.html.erb within layouts/application
+  [1m[36mGarden Load (0.5ms)[0m  [1m[34mSELECT "gardens".* FROM "gardens"[0m
+  ↳ app/views/gardens/index.html.erb:2
+  Rendered gardens/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 851)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 1879.8ms | Allocations: 6785)
+Completed 500 Internal Server Error in 1884ms (ActiveRecord: 0.5ms | Allocations: 7854)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /Applications/Flatiron Curriculum/Flatiron/Projects/virtual-garden/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
