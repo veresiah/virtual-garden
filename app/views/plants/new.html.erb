@@ -1,1 +1,14 @@
 <h1>Add a Plant</h1>
+
+<%= form_for(@plant) do |f| %>
+    <label>Common name:</label><br>
+    <%= f.text_field :common_name %><br>
+  
+    <label>Scientific name:</label><br>
+    <%= f.text_field :scientific_name %><br>
+  
+    <label>Image URL:</label><br>
+    <%= f.text_field :image_url %><br>
+    
+    <%= f.submit %>
+  <% end %>

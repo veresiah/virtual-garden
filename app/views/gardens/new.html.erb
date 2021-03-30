@@ -1,1 +1,14 @@
 <h1>Create Garden</h1>
+
+<%= form_for(@garden) do |f| %>
+    <label>Garden name:</label><br>
+    <%= f.text_field :name %><br>
+  
+    <label>Owner ID</label><br>
+    <%= f.text_field :owner_id %><br>
+  
+    <label>Plant ID</label><br>
+    <%= f.text_field :plant_id %><br>
+    
+    <%= f.submit %>
+  <% end %>
