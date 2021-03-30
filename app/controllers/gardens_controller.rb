@@ -8,7 +8,7 @@ class GardensController < ApplicationController
     end 
 
     def create
-        @garden = Garden.create(name: params[:name], owner_id: params[:owner_id], plant_id: params[:plant_id])
+        @garden = Garden.create(garden_params)
         redirect_to garden_path(@garden)
     end 
 
@@ -22,7 +22,7 @@ class GardensController < ApplicationController
         
     def update
         @garden = Garden.find(params[:id])
-        @garden.update(name: params[:name], owner_id: params[:owner_id], plant_id: params[:plant_id])
+        @garden.update(garden_params)
         redirect_to garden_path(@garden)
     end 
 
@@ -30,5 +30,10 @@ class GardensController < ApplicationController
         @garden = Garden.find(params[:id])
         @garden.destroy 
         redirect to gardens_path 
+    end 
+
+    private 
+    def garden_params
+        params.require(:garden).permit(:name, :owner_id, :plant_id)
     end 
 end

@@ -8,7 +8,7 @@ class OwnersController < ApplicationController
     end 
 
     def create
-        @owner = Owner.create(name: params[:name])
+        @owner = Owner.create(owner_params)
         redirect_to owner_path(@owner)
     end 
 
@@ -22,7 +22,7 @@ class OwnersController < ApplicationController
         
     def update
         @owner = Owner.find(params[:id])
-        @owner.update(name: params[:name])
+        @owner.update(owner_params)
         redirect_to owner_path(@owner)
     end 
 
@@ -30,5 +30,10 @@ class OwnersController < ApplicationController
         @owner =Owner.find(params[:id])
         @owner.destroy 
         redirect to owners_path 
+    end 
+
+    private 
+    def owner_params
+        params.require(:owner).permit(:name)
     end 
 end

@@ -1,1 +1,6 @@
 <h1>All Plants</h1>
+<% @plants.each do |plant| %>
+    <% link_to plant.scientific_name, plant_path(plant)) %>
+    <%= (link_to "Edit Plant", edit_plant_path(plant)) %>
+    <% end %>
+</div>

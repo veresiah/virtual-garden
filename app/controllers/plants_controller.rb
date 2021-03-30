@@ -8,7 +8,7 @@ class PlantsController < ApplicationController
     end 
 
     def create
-        @plant = Plant.create(common_name: params[:common_name], scientific_name: params[:scientific_name], image_url: params[:image_url])
+        @plant = Plant.create(plant_params)
         redirect_to plant_path(@plant)
     end 
 
@@ -22,7 +22,7 @@ class PlantsController < ApplicationController
         
     def update
         @plant = Plant.find(params[:id])
-        @plant.update(common_name: params[:common_name], scientific_name: params[:scientific_name], image_url: params[:image_url])
+        @plant.update(plant_params)
         redirect_to plant_path(@plant)
     end 
 
@@ -30,5 +30,11 @@ class PlantsController < ApplicationController
         @plant = Plant.find(params[:id])
         @plant.destroy 
         redirect to plants_path 
+    end 
+
+    private 
+
+    def plant_params
+        params.require(:garden).permit(:common_name, :scientific_name, :image_url)
     end 
 end
