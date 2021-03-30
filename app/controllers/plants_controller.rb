@@ -3,14 +3,32 @@ class PlantsController < ApplicationController
         @plants = Plant.all 
     end 
 
-    def show
+    def new 
+        @plant = Plant.new 
+    end 
+
+    def create
+        @plant = Plant.create(common_name: params[:common_name], scientific_name: params[:scientific_name], image_url: params[:image_url])
+        redirect_to plant_path(@plant)
+    end 
+
+    def edit 
+        @plant = Plant.find(params[:id])
+    end 
+
+    def show 
+        @plant = Plant.find(params[:id])
     end 
         
-    private 
+    def update
+        @plant = Plant.find(params[:id])
+        @plant.update(common_name: params[:common_name], scientific_name: params[:scientific_name], image_url: params[:image_url])
+        redirect_to plant_path(@plant)
+    end 
 
-    API_URL = 'https://trefle.io/api/v1/plants/search?token=#{ENV['API_KEY']&q='
-    def get_plant(slug)
-        response = HTTParty.get("#{API_URL}#{slug}")
-        json = JSON.parse(response.body)
+    def delete 
+        @plant = Plant.find(params[:id])
+        @plant.destroy 
+        redirect to plants_path 
     end 
 end
